@@ -1,0 +1,244 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
+    margin:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+#actualizacion{
+    text-align:center;
+    margin-bottom:20px;
+    color:#aaa;
+}
+
+.partido{
+    background:#1e1e1e;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:10px;
+}
+
+.equipos{
+    display:flex;
+    justify-content:space-between;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.estado{
+    margin-top:10px;
+    color:#7CFC00;
+}
+
+.mensaje{
+    text-align:center;
+    color:#aaa;
+    padding:20px;
+}
+
+.mensaje.error{
+    color:#ff6b6b;
+}
+
+.titulo-seccion{
+    margin-top:30px;
+    margin-bottom:10px;
+    font-size:18px;
+    color:#ddd;
+    border-bottom:1px solid #333;
+    padding-bottom:6px;
+}
+
+.seccion-plegable{
+    margin-top:30px;
+}
+
+.seccion-plegable summary.titulo-seccion{
+    cursor:pointer;
+    list-style:none;
+    user-select:none;
+}
+
+.seccion-plegable summary.titulo-seccion::-webkit-details-marker{
+    display:none;
+}
+
+.seccion-plegable summary.titulo-seccion::before{
+    content:"▶";
+    display:inline-block;
+    margin-right:8px;
+    font-size:12px;
+    color:#7CFC00;
+    transition:transform 0.15s ease;
+}
+
+.seccion-plegable[open] summary.titulo-seccion::before{
+    transform:rotate(90deg);
+}
+
+.seccion-plegable #tablas{
+    margin-top:14px;
+}
+
+.bandera{
+    width:24px;
+    height:18px;
+    object-fit:cover;
+    border-radius:3px;
+    vertical-align:middle;
+    margin:0 4px;
+}
+
+.partido.en-vivo{
+    border:1px solid #7CFC00;
+}
+
+.etiqueta-vivo{
+    font-size:13px;
+    font-weight:bold;
+    color:#ff4d4d;
+    margin-bottom:8px;
+    letter-spacing:0.5px;
+}
+
+.equipo{
+    display:flex;
+    align-items:center;
+}
+
+.marcador{
+    font-size:24px;
+}
+
+.tabla-grupo{
+    background:#1e1e1e;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:20px;
+    overflow-x:auto;
+}
+
+.tabla-grupo h3{
+    margin:0 0 10px 0;
+    color:#7CFC00;
+}
+
+.tabla-grupo table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+}
+
+.tabla-grupo th,
+.tabla-grupo td{
+    text-align:center;
+    padding:6px 8px;
+}
+
+.tabla-grupo th{
+    color:#888;
+    font-weight:normal;
+    border-bottom:1px solid #333;
+}
+
+.celda-equipo{
+    text-align:left !important;
+    white-space:nowrap;
+}
+
+.tabla-grupo tr.clasifica{
+    background:rgba(124,252,0,0.08);
+}
+
+.bracket{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.columna-bracket{
+    min-width:230px;
+    flex:1;
+}
+
+.columna-bracket h3{
+    text-align:center;
+    font-size:14px;
+    color:#ccc;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin-bottom:12px;
+}
+
+.partido-bracket{
+    background:#1e1e1e;
+    border-radius:6px;
+    margin-bottom:14px;
+    overflow:hidden;
+}
+
+.equipo-bracket{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 10px;
+    font-size:13px;
+    border-bottom:1px solid #333;
+}
+
+.equipo-bracket:last-child{
+    border-bottom:none;
+}
+
+.equipo-bracket.resuelto{
+    color:#fff;
+    font-weight:bold;
+}
+
+.equipo-bracket.pendiente{
+    color:#888;
+    font-style:italic;
+}
+
+.equipo-bracket .bandera{
+    margin:0;
+    flex-shrink:0;
+}
+
+.equipo-bracket-fila{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.candidatos{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:3px;
+    margin-top:6px;
+    padding-top:6px;
+    border-top:1px dashed #333;
+}
+
+.candidatos .bandera{
+    width:18px;
+    height:13px;
+}
+
+.candidatos-subgrupo{
+    display:flex;
+    gap:2px;
+}
+
+.separador-candidatos{
+    color:#666;
+    margin:0 3px;
+    font-size:12px;
+}
+
